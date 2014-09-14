@@ -6,11 +6,16 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "^1.0.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-imagemin": "^1.0.1",
     "gulp-load-plugins": "^0.6.0",
     "gulp-minify-css": "^0.3.8",
     "gulp-minify-html": "^0.1.5",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-size": "^1.1.0",
     "gulp-useref": "^1.0.1",
     "gulp-webserver": "^0.8.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/underoot/zheny.git"
 }

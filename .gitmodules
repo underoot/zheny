@@ -1,0 +1,4 @@
+[submodule "dist"]
+	path = dist
+	url = https://underoot@github.com/underoot/zheny.git
+	branch = gh-pages

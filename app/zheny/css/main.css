@@ -1,0 +1,46 @@
+body {
+  width: 100%;
+  background-color: black;
+}
+
+.outer_wrapper {
+  margin: 20px auto 0px auto;
+  width: 95%;
+  background-color: white;
+}
+
+.container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.container > .jumbotron {
+  height: 500px;
+  background-image: url('/zheny/img/zheny.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+
+  transition: all 1s;
+}
+
+@media (max-width: 768px) {
+  .container > .jumbotron {
+    background-position: 50% 0px;
+    height: 300px;
+  }
+}
+
+.message {
+  margin-top: 50px;
+}
+
+.signature {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.memories {
+  margin-top: 100px;
+  padding: 50px;
+}

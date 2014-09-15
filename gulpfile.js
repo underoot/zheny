@@ -10,7 +10,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('app/zheny/css/**/*.css')
+  return gulp.src('app/css/**/*.css')
     .pipe($.minifyCss())
     .pipe($.autoprefixer())
     .pipe(gulp.dest('dist/css'));
@@ -26,7 +26,7 @@ gulp.task('pages', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('app/zheny/img/**/*')
+  return gulp.src('app/img/**/*')
     .pipe($.imagemin({ optimizationLevel: 1 }))
     .pipe(gulp.dest('dist/img'));
 
@@ -41,14 +41,26 @@ gulp.task('server', function() {
 
 });
 
-gulp.task('build', ['styles', 'pages', 'images'], function() {
+gulp.task('scripts', function() {
+
+  return gulp.src('app/js/**/*.js')
+    .pipe($.jshint())
+    .pipe($.uglify())
+    .pipe(gulp.dest('dist/js'));
+
+});
+
+gulp.task('others', function() {
+
+  return gulp.src('app/CNAME')
+    .pipe(gulp.dest('dist'));
+
+});
+
+gulp.task('build', ['styles', 'pages', 'images', 'scripts', 'others'], function() {
   return gulp.src('dist/**/*')
     .pipe($.size({
       title: 'build',
       showFiles: true
     }))
-});
-
-gulp.task('default', ['clean'], function() {
-  return gulp.start('build');
 });

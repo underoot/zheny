@@ -1,0 +1,106 @@
+html * {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+
+}
+
+body {
+  width: 100%;
+  background-color: black;
+
+  font-family: "Open Sans";
+}
+
+.outer-wrapper {
+  margin: 20px auto 0px auto;
+  width: 95%;
+  background-color: white;
+}
+
+.container {
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.container > .jumbotron {
+  height: 500px;
+  background-image: url('/img/zheny.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+
+  transition: all 1s;
+}
+
+.about {
+  text-align: center;
+}
+
+.obituary {
+  margin-top: 50px;
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.quotes {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.memory {
+  line-height: 1.65em;
+  font-style: italic;
+}
+
+.memory > .text {
+  padding: 30px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.memory > .text > .signature {
+  font-size: 0.8em;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.treatment {
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.send-memory {
+  margin-top: 100px;
+}
+
+.captcha {
+  padding: 10px;
+}
+
+.alert {
+  margin-top: 20px;
+}
+
+.form-description {
+  margin-top: 20px;
+  font-size: 0.7em;
+}
+
+.row-captcha {
+  padding: 15px;
+}
+
+@media (max-width: 768px) {
+  .container > .jumbotron {
+    background-position: 50% 0px;
+    height: 300px;
+  }
+
+  .treatment > h1 {
+    font-size: 1.2em;
+  }
+
+  .treatment > h4 {
+    font-size: 0.9em;
+  }
+}

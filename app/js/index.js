@@ -35,7 +35,8 @@ $(function() {
       var body = jqXHR.responseJSON;
 
       updateCaptcha(body.image, body.uid);
-
+      $('.row-captcha input[name="captcha"]').val("");
+      
       switch(jqXHR.status) {
         case 403:
         $('.form-memory').append(new String(
